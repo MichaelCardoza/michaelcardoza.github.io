@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/layout.astro';
+import Command from '../components/command.astro';
+---
+
+<Layout title="Michael Cardoza - Profile">
+	<header class="py-3 px-6 bg-zinc-800 text-right text-zinc-300">
+		<h5 class="font-mono">~/profile</h5>
+	</header>
+	<main class="p-10 font-light font-mono flex flex-col gap-y-10">
+		<section class="flex flex-col gap-y-4 text-zinc-200">
+			<Command name="whoami" />
+			<h1 class="text-lg">
+				I'm
+				<span class="italic font-normal text-green-500">Michael Cardoza</span>
+				 - Software Developer
+			</h1>
+		</section>
+		<section class="flex flex-col gap-y-4 text-zinc-200">
+			<Command name="cat .skills" />
+			<ul class="">
+				<li>
+					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
+					<span> # Python</span>
+				</li>
+				<li>
+					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
+					<span> # Javascript</span>
+				</li>
+				<li>
+					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
+					<span> # PHP</span>
+				</li>
+			</ul>
+		</section>
+	</main>
+</Layout>
