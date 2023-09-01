@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/layout.astro';
+import Header from '../components/header.astro';
 import Command from '../components/command.astro';
 ---
 
 <Layout title="Michael Cardoza - Profile">
-	<header class="py-3 px-6 bg-zinc-800 text-right text-zinc-300">
-		<h5 class="font-mono">~/profile</h5>
-	</header>
+	<Header />
 	<main class="p-10 font-light font-mono flex flex-col gap-y-10">
 		<section class="flex flex-col gap-y-4 text-zinc-200">
 			<Command name="whoami" />
@@ -17,19 +16,46 @@ import Command from '../components/command.astro';
 			</h1>
 		</section>
 		<section class="flex flex-col gap-y-4 text-zinc-200">
-			<Command name="cat .skills" />
+			<Command name="cat ~/.skills" />
 			<ul class="">
 				<li>
-					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
-					<span> # Python</span>
+					- <span class="italic font-normal text-green-500">Python</span> |
+					[FastApi]
 				</li>
 				<li>
-					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
-					<span> # Javascript</span>
+					- <span class="italic font-normal text-green-500">Javascript</span> | [ReactJS, NextJS, NestJS]
 				</li>
 				<li>
-					<span class="text-zinc-700">drwxr-xr-x staff staff</span>
-					<span> # PHP</span>
+					- <span class="italic font-normal text-green-500">PHP</span> | [Laravel, Wordpress Dev]
+				</li>
+				<li>
+					- <span class="italic font-normal text-green-500">Database</span> | [Postgres, MySql, MongoDB]
+				</li>
+				<li>
+					- <span class="italic font-normal text-green-500">Docker</span>
+				</li>
+			</ul>
+		</section>
+		<section class="flex flex-col gap-y-4 text-zinc-200">
+			<Command name="history | grep -w 'project'" />
+			<ul>
+				<li class="text-lg">
+					- Project:
+					<span class="italic font-normal text-green-500">"katana.run"</span>
+					| (Full Stack) |
+					<a href="" target="_blank" class="italic underline text-zinc-400">open in new tab</a>
+				</li>
+				<li class="text-lg">
+					- Project:
+					<span class="italic font-normal text-green-500">"jeti.ai"</span>
+					| (Backend) |
+					<a href="" target="_blank" class="italic underline text-zinc-400">open in new tab</a>
+				</li>
+				<li class="text-lg">
+					- Project:
+					<span class="italic font-normal text-green-500">"Grupo Fiancar"</span>
+					| (Frontend) |
+					<a href="" target="_blank" class="italic underline text-zinc-400">open in new tab</a>
 				</li>
 			</ul>
 		</section>
